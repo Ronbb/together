@@ -1,4 +1,4 @@
-package ronbb.run.together
+package `fun`.ronbb.together
 
 import io.flutter.embedding.android.FlutterActivity
 
