@@ -14,14 +14,30 @@ class _GlobalWrapperState extends State<GlobalWrapper> {
   Brightness get oppositeBrightness =>
       brightness == Brightness.light ? Brightness.dark : Brightness.light;
 
+  SystemUiOverlayStyle get style {
+    return SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent,
+      systemNavigationBarColor: Colors.transparent,
+      statusBarIconBrightness: oppositeBrightness,
+      systemNavigationBarIconBrightness: Brightness.light,
+      statusBarBrightness: brightness,
+      systemNavigationBarDividerColor: Colors.transparent,
+    );
+  }
+
+  @override
+  void initState() {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      SystemChrome.setSystemUIOverlayStyle(style);
+    });
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return AnnotatedRegion<SystemUiOverlayStyle>(
       child: widget.root,
-      value: SystemUiOverlayStyle(
-        statusBarColor: Colors.transparent,
-        statusBarIconBrightness: oppositeBrightness,
-      ),
+      value: style,
     );
   }
 }
