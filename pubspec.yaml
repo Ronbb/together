@@ -24,6 +24,8 @@ dependencies:
   flutter:
     sdk: flutter
   get_it: ^4.0.2
+  latlng: ^0.0.2
+  map: ^0.1.0+1
   syncfusion_flutter_calendar: ^18.2.44
   syncfusion_flutter_core: ^18.2.44
 

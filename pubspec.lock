@@ -100,6 +100,20 @@ packages:
       url: "https://mirrors.tuna.tsinghua.edu.cn/dart-pub"
     source: hosted
     version: "0.16.1"
+  latlng:
+    dependency: "direct main"
+    description:
+      name: latlng
+      url: "https://mirrors.tuna.tsinghua.edu.cn/dart-pub"
+    source: hosted
+    version: "0.0.2"
+  map:
+    dependency: "direct main"
+    description:
+      name: map
+      url: "https://mirrors.tuna.tsinghua.edu.cn/dart-pub"
+    source: hosted
+    version: "0.1.0+1"
   matcher:
     dependency: transitive
     description:
