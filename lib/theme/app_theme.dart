@@ -12,7 +12,7 @@ class AppTheme {
         ),
         brightness: Brightness.light,
         primarySwatch: Colors.blue,
-        // platform: TargetPlatform.iOS,
+        platform: TargetPlatform.iOS,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       );
 
@@ -22,7 +22,7 @@ class AppTheme {
           brightness: Brightness.light,
         ),
         brightness: Brightness.dark,
-        // platform: TargetPlatform.iOS,
+        platform: TargetPlatform.iOS,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       );
 }
