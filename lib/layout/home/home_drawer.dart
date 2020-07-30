@@ -67,14 +67,14 @@ class _HomeDrawerState extends State<HomeDrawer> {
                             children: <Widget>[
                               Icon(
                                 _testItem.icon,
-                                color: Colors.green,
+                                color: Colors.blue,
                               ),
                               SizedBox(width: 16.0),
                               Text(
                                 _testItem.label,
                                 maxLines: 1,
                                 overflow: TextOverflow.ellipsis,
-                                style: TextStyle(color: Colors.green[800]),
+                                style: TextStyle(color: Colors.blue[800]),
                               ),
                             ],
                           ),

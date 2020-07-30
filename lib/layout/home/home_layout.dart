@@ -90,6 +90,19 @@ class _HomeLayoutState extends State<HomeLayout>
     }
   }
 
+  void onAddClick() {
+    showDialog(
+      context: context,
+      builder: (context) => SimpleDialog(
+        children: <Widget>[
+          TextField(
+            autofocus: true,
+          ),
+        ],
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -171,7 +184,7 @@ class _HomeLayoutState extends State<HomeLayout>
                       body: HomePage(),
                     ),
                     floatingActionButton: FloatingActionButton(
-                      onPressed: () {},
+                      onPressed: onAddClick,
                       child: Icon(Icons.add),
                     ),
                     extendBody: true,
