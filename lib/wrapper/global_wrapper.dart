@@ -19,7 +19,7 @@ class _GlobalWrapperState extends State<GlobalWrapper> {
       statusBarColor: Colors.transparent,
       systemNavigationBarColor: Colors.transparent,
       statusBarIconBrightness: oppositeBrightness,
-      systemNavigationBarIconBrightness: Brightness.light,
+      systemNavigationBarIconBrightness: oppositeBrightness,
       statusBarBrightness: brightness,
       systemNavigationBarDividerColor: Colors.transparent,
     );
