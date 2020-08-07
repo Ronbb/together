@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:syncfusion_flutter_core/core.dart';
+import 'package:together/layout/home/add_todo_dialog.dart';
 import 'package:together/page/login/login_page.dart';
 import 'package:together/wrapper/global_wrapper.dart';
 import 'package:together/ignore/license.dart';
@@ -21,7 +22,7 @@ class App extends StatelessWidget {
       title: 'Together',
       darkTheme: GetIt.I<AppTheme>().dark,
       theme: GetIt.I<AppTheme>().light,
-      home: GlobalWrapper(root: LoginPage()),
+      home: GlobalWrapper(root: (AddTodoDialog())),
     );
   }
 }
