@@ -54,12 +54,15 @@ class _AddTodoDialogState extends State<AddTodoDialog> {
     super.dispose();
   }
 
+  void onFinish() {
+    Navigator.of(context).pop();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
       alignment: Alignment.bottomCenter,
       margin: EdgeInsets.only(bottom: marginBottom),
-      decoration: BoxDecoration(color: Colors.grey),
       child: GestureDetector(
         onTap: () => _focusNode.unfocus(),
         child: Material(
@@ -90,8 +93,14 @@ class _AddTodoDialogState extends State<AddTodoDialog> {
                         Icons.arrow_forward,
                         color: suffixIconColor,
                       ),
-                      onPressed: () {},
+                      onPressed: _hasContent ? onFinish : null,
                     ),
+                  ),
+                  toolbarOptions: ToolbarOptions(
+                    copy: true,
+                    cut: true,
+                    paste: true,
+                    selectAll: true,
                   ),
                   focusNode: _focusNode,
                   textAlignVertical: TextAlignVertical.center,
